@@ -1,5 +1,4 @@
-import regions from '../models/regions.model'
-import logger from '../core/logger/app-logger'
+const regions = require('../models/regions')
 const controller = {};
 
 controller.getPropertiesFromRegions = async (req, res) => {
@@ -14,6 +13,6 @@ controller.getPropertiesFromRegions = async (req, res) => {
   }
 }
 
-export default controller;
+module.exports = controller;
 
 

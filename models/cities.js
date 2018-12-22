@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const citieSchema = mongoose.Schema({
   name: {
@@ -93,4 +93,4 @@ citiesModel.getByRegion = async (region) => {
   }
 }
 
-export default citiesModel;
+module.exports = citiesModel;

@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const regionSchema = mongoose.Schema({
   id: {
@@ -35,4 +35,4 @@ regionsModel.returnListings = async (arrayOfIDs) => {
   return listings;
 }
 
-export default regionsModel;
+module.exports = regionsModel;

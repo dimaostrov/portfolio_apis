@@ -1,7 +1,6 @@
 //Import the mongoose module
 var mongoose = require('mongoose');
 const Recipe = require('./recipe')
-const Seed = require('./seed')
 
 
 //Set up default mongoose connection
@@ -24,5 +23,4 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 module.exports = {
     db,
     Recipe,
-    Seed
 }

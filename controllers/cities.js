@@ -1,7 +1,6 @@
-import city from '../models/cities.model';
-import regions from '../models/regions.model';
-import logger from '../core/logger/app-logger';
-import R from 'ramda';
+const city = require('../models/cities');
+const regions = require('../models/regions');
+const R = require('ramda');
 
 const controller = {};
 
@@ -73,7 +72,7 @@ controller.topZipByCity = async (req, res) => {
             const averageRevenue = R.mean(earningPotentialArray);
             return ([zip, averageRevenue]);
         })
-        // Here all sorting happens from the unsorted zipsWithRevenue
+        // Here all sorting happens = require( the unsorted zipsWithRevenue
         const sort = function(a, b) { return b - a };
         const revenuePlace = R.prop(1);
         const sortFunction = R.sortWith([
@@ -94,4 +93,4 @@ controller.getAllCityNames = async (req, res) => {
 
 }
 
-export default controller;
+module.exports = controller;
