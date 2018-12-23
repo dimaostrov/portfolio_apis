@@ -15,6 +15,7 @@ const recipesRouter = require('./routes/recipes');
 const citiesRouter = require('./routes/cities');
 
 const app = express();
+app.use(cors())
 app.use(helmet())
 app.use(compression()); //Compress all routes
 app.use(logger('dev'));

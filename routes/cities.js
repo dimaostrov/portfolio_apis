@@ -36,4 +36,8 @@ router.post('/topzipbycity', authenticator(), (req, res) => {
     tokenize(cityController.topZipByCity(req, res), req, res)
 })
 
+router.post('/botquery', authenticator(), (req, res) => {
+    cityController.botQuery(req, res);
+})
+
 module.exports = router;

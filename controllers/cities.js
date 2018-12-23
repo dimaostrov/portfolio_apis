@@ -93,4 +93,8 @@ controller.getAllCityNames = async (req, res) => {
 
 }
 
+controller.botQuery = async (req, res) => {
+    res.send('thanks for bots')
+}
+
 module.exports = controller;
