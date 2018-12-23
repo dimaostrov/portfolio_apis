@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./dist/app.js",
+    "start": "node ./dist/bin/www",
     "dev": "nodemon ./src/bin/www --watch server --exec babel-node",
     "clean": "rm -rf dist && mkdir dist",
-    "build": "npm run clean && babel src --out-dir dist && cp ./src/bin ./dist"
+    "build": "npm run clean && babel src --out-dir dist && cp -r ./src/bin ./dist"
   },
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.2.0",
